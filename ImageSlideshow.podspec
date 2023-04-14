@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
-Image slideshow is a Swift library providing customizable image slideshow with circular scrolling, timer and full screen viewer and extendable image source (AFNetworking image source available in AFURL subspec).
+Image slideshow is a Swift library providing customizable image slideshow with circular scrolling, timer and full screen viewer and extendable image source.
                          DESC
 
   s.homepage         = "https://github.com/zvonicek/ImageSlideshow"
@@ -28,20 +28,14 @@ Image slideshow is a Swift library providing customizable image slideshow with c
   s.social_media_url = 'https://twitter.com/zvonicek'
 
   s.swift_versions = ['4.0', '4.1', '4.2', '5', '5.1', '5.2']
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '12.0'
   s.requires_arc = true
 
   s.subspec 'Core' do |core|
     core.source_files = 'ImageSlideshow/Classes/Core/**/*'
     core.resources = 'ImageSlideshow/Assets/*.png'
   end
-
-  s.subspec 'AFURL' do |subspec|
-    subspec.dependency 'ImageSlideshow/Core'
-    subspec.dependency 'AFNetworking', '~> 3.0'
-    subspec.source_files = 'ImageSlideshow/Classes/InputSources/AFURLSource.swift'
-  end
-
+  
   s.subspec 'Alamofire3' do |subspec|
     subspec.dependency 'ImageSlideshow/Core'
     subspec.dependency 'AlamofireImage', '~> 3.0'
@@ -51,20 +45,21 @@ Image slideshow is a Swift library providing customizable image slideshow with c
   s.subspec 'Alamofire' do |subspec|
     subspec.dependency 'ImageSlideshow/Core'
     subspec.dependency 'AlamofireImage', '~> 4.0'
-    subspec.platform     = :ios, '10.0'
+    subspec.platform     = :ios, '12.0'
     subspec.source_files = 'ImageSlideshow/Classes/InputSources/AlamofireSource.swift'
   end
 
   s.subspec 'SDWebImage' do |subspec|
     subspec.dependency 'ImageSlideshow/Core'
     subspec.dependency 'SDWebImage', '>= 3.7'
+    subspec.platform     = :ios, '12.0'
     subspec.source_files = 'ImageSlideshow/Classes/InputSources/SDWebImageSource.swift'
   end
 
   s.subspec 'Kingfisher' do |subspec|
     subspec.dependency 'ImageSlideshow/Core'
     subspec.dependency 'Kingfisher', '> 3.0'
-    subspec.platform     = :ios, '10.0'
+    subspec.platform     = :ios, '12.0'
     subspec.source_files = 'ImageSlideshow/Classes/InputSources/KingfisherSource.swift'
   end
 

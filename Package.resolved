@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "349ed06467a6f8a4939bcb83db301542bc84eac9",
-          "version": "5.13.4"
+          "revision": "af4be924ad984cf4d16f4ae4df424e79a443d435",
+          "version": "7.6.2"
         }
       },
       {
@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {
           "branch": null,
-          "revision": "74ae21337c415bb542eb901803f3e84799265c34",
-          "version": "5.7.2"
+          "revision": "fb50c1d20f24db5322b2f8f379de3618f75fe08e",
+          "version": "5.15.5"
         }
       }
     ]
